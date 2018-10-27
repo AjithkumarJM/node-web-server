@@ -51,7 +51,6 @@ app.get('/', (req, res) => {
     res.render('welcome.hbs', {
         pageTitle: 'Hello',
         welcomeMessage: 'welcome to my webiste.',
-        currentYear: new Date().getFullYear()
     });
 });
 
@@ -59,7 +58,14 @@ app.get('/about', (req, res) => {
     // res.send('About Page');
     res.render('about.hbs', {
         pageTitle: 'About page',
-        currentYear: new Date().getFullYear()
+    })
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects',
+        welcomeMessage: 'This is about node-server',
+
     })
 });
 
